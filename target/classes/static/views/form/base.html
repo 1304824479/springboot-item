@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>UI</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+	
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+	<script type="text/javascript" src="../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../js/core.js"></script>
+	<script type="text/javascript" src="../../js/ui.js"></script>
+
+</head>
+<body>
+<div id="pageForm" class="page-layout">
+	<div class="page-header"><h1>输入框</h1></div>
+	<div class="mt-lg font-b fontsize16">页面中常用的输入框</div>
+	<div class="mt fontsize14 ">知识点：无</div>
+
+	<!--案例1：默认单行输入框 -->
+	<div class="mt-lg font-b fontsize14">案例1：默认输入框</div>
+	<div class="mt fontsize14 ">知识点：系统默认的输入框</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+	<input type="text"   placeholder="默认输入框" >
+	<input type="password"  placeholder="密码输入框" >
+	</xmp>
+	<div class="mt">效果如下：</div>
+	<input type="text"    class="mt"  placeholder="默认输入框" >
+	<input type="password"    class="mt"  placeholder="密码输入框" >
+
+
+	<!--案例2：无边框输入框 -->
+	<div class="mt-lg font-b fontsize14">案例2：无边框输入框</div>
+	<div class="mt fontsize14 ">知识点：系统默认的输入框(不带框框),如果需要无边框，则只需加上class属性值为"border-no"即可</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+    <input type="text"    class="border-no" placeholder="无边框输入框" >
+    <input type="password"    class="border-no" placeholder="密码输入框" >
+	</xmp>
+	<div class="mt">效果如下：</div>
+	<input type="text"    class="border-no mt" placeholder="无边框输入框" >
+	<input type="password"    class="border-no mt" placeholder="密码输入框" >
+
+
+	<!--案例3：带有搜索图标的单行输入框 -->
+	<div class="mt-lg font-b fontsize14">案例3：带有搜索图标的单行输入框</div>
+	<div class="mt fontsize14 ">知识点：带有搜索图标的单行输入框</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+	<input type="text"    class="iroad-search form-width-normal" placeholder="带搜索图标输入框" >
+	<input type="text"    class="iroad-search-left form-width-normal input-hover-blue" placeholder="带搜索图标输入框" >
+	</xmp>
+	<div class="mt">效果如下：</div>
+	<input type="text"    class="iroad-search form-width-normal mt" placeholder="带搜索图标输入框" >
+	<input type="text"    class="iroad-search-left form-width-normal input-hover-blue mt" placeholder="带搜索图标输入框" >
+
+	<!--案例4：禁用输入框 -->
+	<div class="mt-lg font-b fontsize14">案例4：禁用输入框</div>
+	<div class="mt fontsize14 ">知识点：禁用，不提交改值</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+	<input type="text" disabled value="禁用,不提交改值">
+	</xmp>
+	<div class="mt">效果如下：</div>
+	<input type="text" class="mt" disabled value="禁用,不提交改值">
+
+
+	<!--案例5：禁用输入框2 -->
+	<div class="mt-lg font-b fontsize14">案例5：禁用输入框2</div>
+	<div class="mt fontsize14 ">知识点：禁用，提交改值</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+	<input type="text"  readonly value="禁用,提交改值">
+	</xmp>
+	<div class="mt">效果如下：</div>
+	<input type="text" class="mt" readonly value="禁用,提交改值">
+
+	<!--案例6：带背景颜色单行输入框 -->
+	<div class="mt-lg font-b fontsize14">案例6：带背景颜色单行输入框</div>
+	<div class="mt fontsize14 ">知识点：带背景颜色单行输入框只需要在class属性值中加上"form-bg"即可</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+	<input type="text"    class="form-bg" placeholder="带背景颜色单行输入框" >
+	</xmp>
+	<div class="mt">效果如下：</div>
+	<input type="text"   class="mt form-bg"  placeholder="带背景颜色单行输入框" >
+
+	<!--案例7：带不同宽度的单行输入框 -->
+	<div class="mt-lg font-b fontsize14">案例7：带不同宽度的单行输入框</div>
+	<div class="mt fontsize14 ">知识点：系统内置不同宽度的单行输入框</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+	<input type="text"  class="form-width-short"  placeholder="短宽度" >
+	<input type="text"  class="form-width-normal"  placeholder="正常宽度" >
+	<input type="text"  class="form-width-long"  placeholder="长宽度" >
+	<input type="text"  class="form-width-full"  placeholder="全屏宽度" >
+	<input type="text"  class="form-width-full-of90"  placeholder="全屏90%宽度" >
+	<input type="text"  class="form-width-full-differ"  placeholder="全屏差宽度" >
+	</xmp>
+	<div class="mt">效果如下：</div>
+
+	<div class="mt ">
+		<input type="text"  class="form-width-short"  placeholder="短宽度" >
+	</div>
+	<div class="mt ">
+		<input type="text"  class="form-width-normal"  placeholder="正常宽度" >
+	</div>
+	<div class="mt ">
+		<input type="text"  class="form-width-long"  placeholder="长宽度" >
+	</div>
+	<div class="mt ">
+		<input type="text"  class="form-width-full"  placeholder="全屏宽度" >
+	</div>
+	<div class="mt ">
+		<input type="text"  class="form-width-full-of90"  placeholder="全屏90%宽度" > 提示文字
+	</div>
+	<div class="mt ">
+		<input type="text"  class="form-width-full-differ"  placeholder="全屏差宽度" > 提示
+	</div>
+
+	<!--案例8：默认多行输入框 -->
+	<div class="mt-lg font-b fontsize14">案例8：默认多行输入框</div>
+	<div class="mt fontsize14 ">知识点：系统默认多行输入框</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+	<textarea placeholder="默认多行输入框"></textarea>
+	</xmp>
+	<div class="mt">效果如下：</div>
+	 <textarea placeholder="默认多行输入框"></textarea>
+
+	<!--案例9：带不同宽度的多行输入框 -->
+	<div class="mt-lg font-b fontsize14">案例9：带不同宽度的多行输入框</div>
+	<div class="mt fontsize14 ">知识点：系统带不同宽度的多行输入框</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+		<textarea class="border-no" placeholder="无边框多行输入框" ></textarea>
+		<textarea class="form-bg" placeholder="带背景颜色多行输入框" ></textarea>
+		<textarea class="form-width-short"  placeholder="短宽度"></textarea>
+		<textarea class="form-width-normal"  placeholder="正常宽度"></textarea>
+		<textarea class="form-width-long"  placeholder="长宽度"></textarea>
+		<textarea class="form-width-full"  placeholder="全屏宽度"></textarea>
+		<textarea class="form-width-full-of90"  placeholder="全屏90%宽度"></textarea>
+		<textarea class="form-width-full-differ"  placeholder="全屏差宽度"></textarea>
+	</xmp>
+	<div class="mt">效果如下：</div>
+	<div class="mt"><textarea placeholder="无边框多行输入框" class="border-no"></textarea></div>
+	<div class="mt"><textarea placeholder="带背景颜色多行输入框" class="form-bg"></textarea></div>
+	<div class="mt"><textarea class="form-width-short"  placeholder="短宽度"></textarea></div>
+	<div class="mt"><textarea class="form-width-normal"  placeholder="正常宽度"></textarea></div>
+	<div class="mt"><textarea class="form-width-long"  placeholder="长宽度"></textarea></div>
+	<div class="mt"><textarea class="form-width-full"  placeholder="全屏宽度"></textarea></div>
+	<div class="mt"><textarea class="form-width-full-of90"  placeholder="全屏90%宽度"></textarea></div>
+	<div class="mt"><textarea class="form-width-full-differ"  placeholder="全屏差宽度"></textarea></div>
+
+	<!--案例10：单选按钮框 -->
+	<div class="mt-lg font-b fontsize14">案例10：单选按钮框</div>
+	<div class="mt fontsize14 ">知识点：系统默认单选按钮框</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+	<label class="radio"><input type="radio" name="sex"><p class="option"></p>男	</label>
+	<label class="radio"><input type="radio" name="sex"><p class="option"></p>女	</label>
+
+	<label class="radio"><input type="radio" name="sex2"><p class="option2"></p>男	</label>
+	<label class="radio"><input type="radio" name="sex2"><p class="option2"></p>女	</label>
+	</xmp>
+	<div class="mt">效果如下：</div>
+	<div class="mt">
+		<label class="radio"><input type="radio" name="sex"><p class="option"></p>男	</label>
+		<label class="radio"><input type="radio" name="sex"><p class="option"></p>女	</label>
+	</div>
+	<div class="mt">
+		<label class="radio"><input type="radio" name="sex2"><p class="option2"></p>男	</label>
+		<label class="radio"><input type="radio" name="sex2"><p class="option2"></p>女	</label>
+	</div>
+
+	<!--案例11：复选按钮框 -->
+	<div class="mt-lg font-b fontsize14">案例11：复选按钮框</div>
+	<div class="mt fontsize14 ">知识点：系统默认复选按钮框</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+	<label class="checkbox"><input type="checkbox" name="name"><p class="option"></p>张三</label>
+	<label class="checkbox"><input type="checkbox" name="name"><p class="option"></p>李四</label>
+	<label class="checkbox"><input type="checkbox" name="name"><p class="option"></p>王五</label>
+
+	<label class="checkbox"><input type="checkbox" name="name"><p class="option2"></p>张三</label>
+	<label class="checkbox"><input type="checkbox" name="name"><p class="option2"></p>李四</label>
+	<label class="checkbox"><input type="checkbox" name="name"><p class="option2"></p>王五</label>
+	</xmp>
+	<div class="mt">效果如下：</div>
+	<div class="mt">
+		<label class="checkbox"><input type="checkbox" name="name"><p class="option"></p>张三</label>
+		<label class="checkbox"><input type="checkbox" name="name"><p class="option"></p>李四</label>
+		<label class="checkbox"><input type="checkbox" name="name"><p class="option"></p>王五</label>
+	</div>
+	<div class="mt">
+		<label class="checkbox"><input type="checkbox" name="name"><p class="option2"></p>张三</label>
+		<label class="checkbox"><input type="checkbox" name="name"><p class="option2"></p>李四</label>
+		<label class="checkbox"><input type="checkbox" name="name"><p class="option2"></p>王五</label>
+	</div>
+
+	<!--案例12：默认下拉选项框 -->
+	<div class="mt-lg font-b fontsize14">案例12：默认下拉选项框</div>
+	<div class="mt fontsize14 ">知识点：系统默认下拉选项框,宽度的使用与文本输入域的使用一致</div>
+	<div class="mt">代码如下：</div>
+	<xmp class="demo-code mt">
+		<select  >
+			<option value="1">湖北</option>
+			<option value="1">广东</option>
+			<option value="1">湖南</option>
+			<option value="1">上海</option>
+		</select>
+	</xmp>
+	<div class="mt">效果如下：</div>
+	<div class="mt">
+		<select name="area" >
+			<option value="1">湖北</option>
+			<option value="1">广东</option>
+			<option value="1">湖南</option>
+			<option value="1">上海</option>
+		</select>
+	</div>
+
+</div>
+
+
+
+</body>
+</html>

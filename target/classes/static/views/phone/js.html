@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>js函数</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+	
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+	<script type="text/javascript" src="../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../js/core.js"></script>
+	<script type="text/javascript" src="../../js/ui.js"></script>
+
+</head>
+<body>
+
+<div  class="page-layout">
+    <div class="page-header"><h1>js函数</h1></div>
+    <div class="mt-lg font-b fontsize16">APP端js常用的函数</div>
+    <div class="mt fontsize14 ">知识点：无</div>
+
+
+    <!--案例1：列表数据加载1 -->
+    <div class="mt-lg font-b fontsize14">案例1：APP端js常用的函数</div>
+    <div class="mt fontsize14 ">知识点：无 </div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code mt">
+        <script>
+          //1, app函数
+            app.setItem(key,value);  //保存数据到缓存中
+            app.getItem(key); //从缓存中获取数据
+            app.removeItem(key);//清除缓存中的数据
+            app.post(url,param,callback); //APP请求数据
+            app.getParamValue(name);//获取页面参数的值
+            app.alert(context,callback);  //app及时提示框
+
+          //2, 自定义函数
+             toPage(url);//跳转页面
+             refreshPage();//刷新页面
+             getStrCount(scrstr, armstr);//获取特殊字符在源字符串中的个数
+             isMobile(phone);//验证手机号是否正确
+             isPhone(phone);//验证手机号是否正确
+             amountFormat(amount);//金额格式化
+             isNull(str);//验证是否为空
+        </script>
+    </xmp>
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>

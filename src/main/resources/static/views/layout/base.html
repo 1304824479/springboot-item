@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>边框布局</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+	
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+	<script type="text/javascript" src="../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../js/core.js"></script>
+	<script type="text/javascript" src="../../js/ui.js"></script>
+
+</head>
+<body>
+<div  class="page-layout">
+    <div class="page-header"><h1>边框布局</h1></div>
+    <div class="mt-lg font-b fontsize16">边框布局分为左右边框和上下左右中边框两种</div>
+    <div class="mt fontsize14 ">知识点：无</div>
+    <!-- 案例1、左右边框 -->
+    <div class="mt-lg font-b fontsize14">案例1：左右边框</div>
+    <div class="mt fontsize14 ">知识点：左右边框布局，需要class为layout的父元素与属性为position="left"
+        及position="center"子元素的配合使用。同时需要给父元素绑定initLayout()函数进行初始化，并且需要传递一个参数。
+        其中，layout的宽高默认与父元素的宽高一致</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code mt">
+    html代码
+    <div class="layout">
+        <div position="left">左边布局</div>
+        <div position="center">中间布局</div>
+    </div>
+    js代码
+    <script type="text/javascript">
+        $(function () {
+            var layoutCfg={leftWidth :230}; //边框左边的宽度为230像素
+            $(".layout").initLayout(layoutCfg); //对左右边框进行初始化
+        })
+    </script>
+    </xmp>
+    <div class="mt">效果如下（示例的高度为300px）：</div>
+    <div style="height: 300px;" class="mt">
+        <div class="layout layout1">
+            <div position="left">左边布局</div>
+            <div position="center">中间布局</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            var layoutCfg1={leftWidth :230}; //边框左边的宽度为230像素
+            $(".layout1").initLayout(layoutCfg1); //对左右边框进行初始化
+
+        })
+    </script>
+
+    <!-- 案例2：上下左右中边框 -->
+    <div class="mt-lg font-b fontsize14">案例2：上下左右中边框</div>
+    <div class="mt fontsize14 ">知识点：上下左右中边框布局，需要class为layout的父元素与属性为position="top"
+        ，position="left"，position="center"，position="right"，position="bottom"子元素的配合使用。
+        同时需要给父元素绑定initLayout()函数进行初始化，并且需要传递一个参数。
+        其中，layout的宽高默认与父元素的宽高一致</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code mt">
+    html代码
+    <div class="layout">
+        <div position="top">上部布局</div>
+        <div position="left">左边布局</div>
+        <div position="center">中间布局</div>
+        <div position="right">右边布局</div>
+        <div position="bottom">底部布局</div>
+    </div>
+    js代码
+    <script type="text/javascript">
+        $(function () {
+            var layoutCfg={
+                topHeight :150,  //顶部高度
+                leftWidth :230,  //左边宽度
+                rightWidth:150,  //右边宽度
+                bottomHeight:100  //底部高度
+            };
+            $(".layout").initLayout(layoutCfg); //对左右边框进行初始化
+        })
+    </script>
+    </xmp>
+    <div class="mt">效果如下（示例的高度为600px）：</div>
+    <div style="height: 600px;" class="mt">
+        <div class="layout layout2">
+            <div position="top">上部布局</div>
+            <div position="left">左边布局</div>
+            <div position="center">中间布局</div>
+            <div position="right">右边布局</div>
+            <div position="bottom">底部布局</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            var layoutCfg2={
+                topHeight :150,  //顶部高度
+                leftWidth :230,  //左边宽度
+                rightWidth:150,  //右边宽度
+                bottomHeight:100  //底部高度
+            };
+            $(".layout2").initLayout(layoutCfg2); //对左右边框进行初始化
+        })
+    </script>
+    <!--
+    <div class="layout">
+        <div position="top">上部布局</div>
+        <div position="left">左边布局</div>
+        <div position="center">中间布局</div>
+        <div position="right">右边布局</div>
+        <div position="bottom">底部布局</div>
+    </div>
+    <div class="layout">
+          <div class='layout-vertical-arrow mini-left'></div>
+          <div class='layout-vertical-arrow mini-right'></div>
+          <div class='layout-horizontal-arrow mini-top'></div>
+          <div class='layout-horizontal-arrow mini-bottom'></div>
+    </div>
+    -->
+
+</div>
+
+<script type="text/javascript">
+    $(function () {
+
+        /**
+         * 初始化布局
+         * @param layoutCfg
+         * topHeight:0  //顶部高度
+         * leftWidth:0  //左边宽度
+         * rightWidth:0 //右边宽度
+         * bottomHeight:0 //底部高度
+         */
+        /*
+        var layoutCfg={
+            topHeight :150,
+            leftWidth :230,
+            rightWidth:150,
+            bottomHeight:100
+        };
+         */
+        /*
+        var layoutCfg={
+            leftWidth :230
+        };
+
+        $(".layout").initLayout(layoutCfg);
+       */
+
+    })
+
+
+</script>
+
+</body>
+</html>

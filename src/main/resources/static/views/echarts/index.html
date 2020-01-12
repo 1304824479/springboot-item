@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>图表</title>
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+	<script type="text/javascript" src="../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../libs/echarts.min.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="../../js/pages/echarts.js"></script>
+<div  class="page-layout">
+    <div class="page-header"><h1>图表</h1></div>
+    <div class="mt-lg font-b fontsize16">图表页面</div>
+    <div class="mt fontsize14 ">知识点：需要引入echarts.min.js,参考网址 <a class="color-red" href="http://echarts.baidu.com/tutorial.html#5%20%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8B%20ECharts">5 分钟上手 ECharts</a> </div>
+
+    <!--案例1：模板页面 -->
+    <div class="mt-lg font-b fontsize14">案例1：绘制一个简单的图表</div>
+    <div class="mt fontsize14 ">知识点：在绘图前我们需要为 ECharts 准备一个具备高宽的 DOM 容器。
+        然后就可以通过 echarts.init 方法初始化一个 echarts 实例并通过 setOption 方法生成一个简单的柱状图，下面是完整代码</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code">
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+        <div id="main" style="width: 600px;height:400px;"></div>
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: 'ECharts 入门示例'
+                },
+                tooltip: {},
+                legend: {
+                    data:['销量']
+                },
+                xAxis: {
+                    data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                },
+                yAxis: {},
+                series: [{
+                    name: '销量',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+
+        </script>
+    </xmp>
+    <div class="mt mb">效果如下（效果经过改造）：</div>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" class="border" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        var dom=document.getElementById('main');
+        // 基于准备好的dom，初始化echarts实例
+        var chart = echarts.init(dom, 'walden');
+        //chart.showLoading();
+        chart.setOption(option);
+        chart.on('click', function (params) {
+            window.open('https://www.baidu.com/s?wd=' + encodeURIComponent(params.name));
+        });
+
+
+    </script>
+
+
+</div>
+
+</body>
+</html>

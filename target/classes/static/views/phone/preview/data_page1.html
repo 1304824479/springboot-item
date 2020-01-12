@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>数据加载案例1</title>
+	<script type="text/javascript" src="../../../libs/phone.meta.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../css/phone.css">
+	<script type="text/javascript" src="../../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../../js/phone.js"></script>
+</head>
+<body>
+
+<div class="page" >
+    <div class="page-header">首页</div>
+    <div class="page-content">
+        <div class="row mt-lg ml">
+            <div class="col-md-6   t_l" id="app">用户名：{{username}}  </div>
+            <div class="col-md-6   t_l">地址：{{address}}</div>
+        </div>
+        <div class="row mt-lg ml">
+            <div class="col-md-6   t_l">出生年月：{{birthday}}</div>
+            <div class="col-md-6   t_l">学校：{{schoole  }}</div>
+        </div>
+    </div>
+    <div class="page-footer">尾部</div>
+</div>
+
+<script>
+    var config={
+        data:{
+            username:"张三",
+            address:"广东省深圳市南山科技园",
+            birthday:"1987-08-08",
+            schoole:"北京大学"
+        }
+    };
+    $("div[class='page-content']").entity(config);
+</script>
+
+</body>
+</html>

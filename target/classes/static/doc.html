@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>武汉研发中心OA项目前端开发文档</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+	
+	<link rel="stylesheet" type="text/css" href="./css/all.css">
+	<script type="text/javascript" src="./libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="./js/core.js"></script>
+	<script type="text/javascript" src="./js/ui.js"></script>
+
+</head>
+<body>
+<script type="text/javascript" src="js/pages/zdesk.js"></script>
+<div class="page">
+<!-- 头部开始  -->
+<div id="maintop" class="main-top">
+	<div class="logo">
+		<div class="logo-ico"><img src="../images/logo.png"  ></div>
+		<div class="logo-des">
+			<p class="cn">办公自动化系统</p>
+			<p class="en">OFFICE AUTOMATION SYSTEM</p>
+		</div>
+	</div>
+	<ul class="system-cat">
+			<li class="active">
+				<a href="#">MA管理系统</a>
+			</li>
+			<li>
+				<a href="#">FA管理系统</a>
+			</li>
+			<li>
+				<a href="#">OA管理系统</a>
+			</li>
+	</ul>
+	<div class="system-user">
+		<div class="userphoto"><p><img src="../images/userphoto.png"></p></div>
+		<div class="username">张三</div>
+		<div class="logout"><a href="#">退出</a></div>
+	</div>
+</div>
+<!-- 头部结束  -->
+
+<!-- 内容开始  -->
+<div  class="main-layout">
+	<!--左边内容布局开始  -->
+	<div class="leftside">
+		<ul class="main-tree">
+
+    <li>
+        <div ><a href="/views/desk/_zdesk.html" target="iframe"><i class="iconfont icon-shouye"></i> 首页</a></div>
+    </li>
+    <li>
+        <div><i class="iconfont icon-shouye"></i> 基本元素</div>
+        <ul>
+            <li><div><a href="/views/flexgrid/base.html" target="iframe"><i class="iconfont icon-list"></i> 栅格布局</a></div> </li>
+            <li><div><a href="/views/layout/base.html" target="iframe"><i class="iconfont icon-list"></i> 边框布局</a></div></li>
+            <li><div><a href="/views/layout/layout2.html" target="iframe"><i class="iconfont icon-list"></i> 左右布局</a></div></li>
+            <li><div><a href="/views/icons/base.html" target="iframe"><i class="iconfont icon-list"></i> 图标</a></div></li>
+            <li><div><a href="/views/button/base.html" target="iframe"><i class="iconfont icon-list"></i> 按钮</a></div></li>
+            <li><div><a href="/views/panel/jpanel.html" target="iframe"><i class="iconfont icon-list"></i> 面板</a></div></li>
+            <li><div><a href="/views/dialog/index.html" target="iframe"><i class="iconfont icon-list"></i> 弹框</a></div></li>
+            <li><div><a href="/views/dialog/tips.html" target="iframe"><i class="iconfont icon-list"></i> 提示框</a></div></li>
+            <li><div><a href="/views/form/base.html" target="iframe"><i class="iconfont icon-list"></i> 表单控件</a></div></li>
+            <li><div><a href="/views/tree/base.html" target="iframe"><i class="iconfont icon-list"></i> tree控件</a></div></li>
+            <li><div><a href="/views/tabs/base.html" target="iframe"><i class="iconfont icon-list"></i> tabs选项卡</a></div></li>
+            <li><div><a href="/views/table/table.html" target="iframe"><i class="iconfont icon-list"></i> 表格</a></div></li>
+            <li><div><a href="/views/js/select.html" target="iframe"><i class="iconfont icon-list"></i> 下拉选项框</a></div></li>
+            <li><div><a href="/views/js/form.html" target="iframe"><i class="iconfont icon-list"></i> 表单自动赋值</a></div></li>
+            <li><div><a href="/views/js/clipboard.html" target="iframe"><i class="iconfont icon-list"></i> clipboard复制</a></div></li>
+            <li><div><a href="/views/js/time.html" target="iframe"><i class="iconfont icon-list"></i> 时间控件</a></div></li>
+            <li><div><a href="/views/js/js.html" target="iframe"><i class="iconfont icon-list"></i> js函数调用</a></div></li>
+            <li><div><a href="/views/js/file.html" target="iframe"><i class="iconfont icon-list"></i> 文件上传</a></div></li>
+            <li><div><a href="/views/js/css.html" target="iframe"><i class="iconfont icon-list"></i> css常量类调用</a></div></li>
+            <li><div><a href="/views/demo/index.html" target="iframe"><i class="iconfont icon-list"></i> 模板页面</a></div></li>
+            <li><div><a href="/views/fenye/index.html" target="iframe"><i class="iconfont icon-list"></i> 分页页面</a></div></li>
+            <li><div><a href="/views/jsp/index.html" target="iframe"><i class="iconfont icon-list"></i> jsp页面</a></div></li>
+            <li><div><a href="/views/js/pic.html" target="iframe"><i class="iconfont icon-list"></i> 截图下载</a></div></li>
+        </ul>
+    </li>
+    <li>
+        <div><i class="iconfont icon-shouye"></i> 手机界面</div>
+        <ul>
+            <li><div><a href="/views/phone/layout.html" target="iframe"><i class="iconfont icon-list"></i> 页面布局</a></div> </li>
+            <li><div><a href="/views/phone/data.html" target="iframe"><i class="iconfont icon-list"></i> 数据加载</a></div> </li>
+            <li><div><a href="/views/phone/list.html" target="iframe"><i class="iconfont icon-list"></i> 列表页</a></div> </li>
+            <li><div><a href="/views/phone/js.html" target="iframe"><i class="iconfont icon-list"></i> js函数</a></div> </li>
+        </ul>
+    </li>
+    <li>
+        <div><i class="iconfont icon-shouye"></i> 图表界面</div>
+        <ul>
+            <li><div><a href="/views/echarts/index.html" target="iframe"><i class="iconfont icon-list"></i> 图表示例</a></div> </li>
+            <li><div><a href="/views/echarts/index2.html" target="iframe"><i class="iconfont icon-list"></i> 图表示例2</a></div> </li>
+        </ul>
+    </li>
+
+   <!--
+    <li>
+        <div ><a href="/views/desk/reflect.html" target="iframe"><i class="iconfont icon-shouye"></i> 一级菜单</a></div>
+    </li>
+
+    <li>
+        <div><i class="iconfont icon-shouye"></i> 二级菜单-一层</div>
+        <ul>
+            <li><div><a href="/pages/case/test.html" target="iframe"><i class="iconfont icon-shouye"></i> 二级菜单-二层</a></div></li>
+        </ul>
+    </li>
+
+    <li>
+        <div><i class="iconfont icon-shouye"></i> 三级菜单-一层</div>
+        <ul>
+            <li>
+                <div><i class="iconfont icon-shouye"></i> 三级菜单-二层</div>
+                <ul>
+                    <li><div><a href="/pages/case/test.html" target="iframe"><i class="iconfont icon-shouye"></i> 三级菜单-三层</a></div></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <div><i class="iconfont icon-shouye"></i> 四级菜单-一层</div>
+        <ul>
+
+            <li>
+                <div><i class="iconfont icon-shouye"></i> 四级菜单-二层</div>
+                <ul>
+                    <li><div><a href="/pages/case/test.html" target="iframe"><i class="iconfont icon-shouye"></i> 四级菜单-三层</a></div></li>
+                </ul>
+            </li>
+            <li>
+                <div><i class="iconfont icon-shouye"></i> 四级菜单-二层</div>
+                <ul>
+                    <li>
+                        <div><i class="iconfont icon-shouye"></i> 四级菜单-三层</div>
+                        <ul>
+                            <li><div><a href="/pages/case/test.html" target="iframe"><i class="iconfont icon-shouye"></i> 四级菜单-四层</a></div></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    -->
+
+</ul>
+	</div>
+	<!--左边内容布局结束  -->
+
+	<!--主内容布局开始  -->
+	<div class="main-iframe">
+		<iframe  src="/views/desk/_zdesk.html"   name="iframe"   ></iframe>
+	</div>
+	<!--主内容布局结束  -->
+
+
+
+</div>
+<!-- 内容结束  -->
+
+</div>
+</body>
+</html>

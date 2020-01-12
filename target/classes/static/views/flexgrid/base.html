@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>UI</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+	
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+	<script type="text/javascript" src="../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../js/core.js"></script>
+	<script type="text/javascript" src="../../js/ui.js"></script>
+
+</head>
+<body>
+
+<style type="text/css">
+
+	.row  {
+		background-color: #2f4d71;
+		color: #ffffff;
+	}
+	.row [class^=col-]{
+		border:1px #ffffff solid;
+		padding: 5px 10px;
+	}
+
+</style>
+
+<div id="pageForm" class="page-layout">
+	<div class="page-header"><h1>栅格布局</h1></div>
+    <div class="page-content mt">
+
+		<div class="mt-lg font-b fontsize16">一行有多列显示，可以使用class名为row和col-md-*来表示</div>
+		<div class="mt fontsize14 ">知识点：将row元素平均等分为12份宽度，col-md-1占1份的宽度，col-md-2占2份的宽度，
+			col-md-3占3份的宽度，依次类推，col-md-12占12份的宽度</div>
+		<!-- 案例1、一行2列 -->
+		<div class="mt-lg font-b fontsize14">案例1：一行2列</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<div class="row">
+		<div class="col-md-6">.col-md-6</div>
+		<div class="col-md-6">.col-md-6</div>
+	</div>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="row mt">
+			<div class="col-md-6">.col-md-6</div>
+			<div class="col-md-6">.col-md-6</div>
+		</div>
+
+		<!-- 案例2、一行3列 -->
+		<div class="mt-lg font-b fontsize14">案例2：一行3列</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<div class="row">
+		<div class="col-md-4">.col-md-4</div>
+		<div class="col-md-4">.col-md-4</div>
+		<div class="col-md-4">.col-md-4</div>
+	</div>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="row mt">
+			<div class="col-md-4">.col-md-4</div>
+			<div class="col-md-4">.col-md-4</div>
+			<div class="col-md-4">.col-md-4</div>
+		</div>
+
+		<!-- 案例3、一行4列 -->
+		<div class="mt-lg font-b fontsize14">案例3：一行4列</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<div class="row">
+		<div class="col-md-3">.col-md-3</div>
+		<div class="col-md-3">.col-md-3</div>
+		<div class="col-md-3">.col-md-3</div>
+		<div class="col-md-3">.col-md-3</div>
+	</div>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="row mt">
+			<div class="col-md-3">.col-md-3</div>
+			<div class="col-md-3">.col-md-3</div>
+			<div class="col-md-3">.col-md-3</div>
+			<div class="col-md-3">.col-md-3</div>
+		</div>
+
+		<!-- 案例4、一行6列 -->
+		<div class="mt-lg font-b fontsize14">案例4：一行6列</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<div class="row">
+		<div class="col-md-2">.col-md-2</div>
+		<div class="col-md-2">.col-md-2</div>
+		<div class="col-md-2">.col-md-2</div>
+		<div class="col-md-2">.col-md-2</div>
+		<div class="col-md-2">.col-md-2</div>
+		<div class="col-md-2">.col-md-2</div>
+	</div>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="row mt">
+			<div class="col-md-2">.col-md-2</div>
+			<div class="col-md-2">.col-md-2</div>
+			<div class="col-md-2">.col-md-2</div>
+			<div class="col-md-2">.col-md-2</div>
+			<div class="col-md-2">.col-md-2</div>
+			<div class="col-md-2">.col-md-2</div>
+		</div>
+
+		<!-- 案例5、一行12列 -->
+		<div class="mt-lg font-b fontsize14">案例5：一行12列</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<div class="row">
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+		<div class="col-md-1">.col-md-1</div>
+	</div>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="row mt">
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+		</div>
+
+		<!-- 案例6、自由组合 -->
+		<div class="mt-lg font-b fontsize14">案例6：自由组合</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<div class="row">
+		<div class="col-md-8">.col-md-8</div>
+		<div class="col-md-4">.col-md-4</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">.col-md-4</div>
+		<div class="col-md-8">.col-md-8</div>
+	</div>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="row mt">
+			<div class="col-md-8">.col-md-8</div>
+			<div class="col-md-4">.col-md-4</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">.col-md-4</div>
+			<div class="col-md-8">.col-md-8</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

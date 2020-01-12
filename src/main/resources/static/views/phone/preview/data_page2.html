@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>数据加载案例1</title>
+	<script type="text/javascript" src="../../../libs/phone.meta.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../css/phone.css">
+	<script type="text/javascript" src="../../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../../js/phone.js"></script>
+</head>
+<body>
+
+<div class="page" >
+    <div class="page-header">首页</div>
+    <div class="page-content">
+        <div class="mt ml t_c">
+            <img data-src="{{src}}" width="300" height="300">
+        </div>
+        <div class="row mt-lg ml">
+            <div class="col-md-6   t_l" id="app">用户名：{{username}}  </div>
+            <div class="col-md-6   t_l">地址：{{address}}</div>
+        </div>
+        <div class="row mt-lg ml">
+            <div class="col-md-6   t_l">出生年月：{{birthday}}</div>
+            <div class="col-md-6   t_l">学校：{{schoole  }}</div>
+        </div>
+    </div>
+    <div class="page-footer">尾部</div>
+</div>
+
+<script>
+    var config={
+        url:"http://192.168.2.45:7878/entity",
+        params:{
+            id:123
+        },
+        getData:function (obj) {
+            var data={
+                username:obj['username'],
+                address:obj['address'],
+                birthday:obj['birthday'],
+                schoole:obj['schoole'],
+                src:obj['src']
+            };
+            return data;
+        }
+    };
+    $("div[class='page-content']").entity(config);
+</script>
+
+</body>
+</html>

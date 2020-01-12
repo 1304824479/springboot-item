@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>弹框示例</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+	
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+	<script type="text/javascript" src="../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../js/core.js"></script>
+	<script type="text/javascript" src="../../js/ui.js"></script>
+
+</head>
+<body>
+<div  class="page-layout">
+    <div class="buttonGroup">
+        <a class="btn btn-iroad" href="javascript:showDialog()" role="button"><i class="icon iconfont icon-zengjia"></i> 增加</a>
+    </div>
+
+
+
+</div>
+
+<div class="dialog-bg">
+    <div class="dialog">
+        <div class="dialogTitle">弹框标题 <i class="icon iconfont icon-close"></i></div>
+        <div class="dialogContent">
+            <table class="table-no-border" >
+    <tr>
+        <td>部门名称1 </td>
+        <td><input type="text"  ></td>
+        <td>部门名称  </td>
+        <td><input type="text"  ><span class="asterisk ml"></span></td>
+    </tr>
+    <tr>
+        <td>部门名称</td>
+        <td><input type="text"    ></td>
+        <td>部门名称</td>
+        <td><input type="text"    ></td>
+    </tr>
+    <tr>
+        <td>性别</td>
+        <td>
+            <label ><input type="radio" name="sex" >男</label>
+            <label class="ml"><input type="radio" name="sex" >女</label>
+        </td>
+        <td>部门</td>
+        <td>
+            <select >
+                <option>请选择</option>
+                <option>技术部</option>
+                <option>运营部</option>
+                <option>策划部</option>
+            </select>
+
+        </td>
+    </tr>
+    <tr>
+        <td>部门名称</td>
+        <td colspan="3"><input type="text" class="form-width-full-differ"   ></td>
+    </tr>
+    <tr>
+        <td>备注</td>
+        <td colspan="3">
+            <textarea  placeholder="请填写备注信息..." class="form-width-full-differ"></textarea>
+        </td>
+    </tr>
+</table>
+        </div>
+        <div class="dialogBtn">
+            <a class="btn" href="#" role="button">增加</a>
+            <a class="btn cancel ml" href="javascript:hideDialog()" role="button">取消</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

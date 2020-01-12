@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>图表</title>
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+	<script type="text/javascript" src="../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../libs/echarts.min.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="../../js/pages/echarts.js"></script>
+<div  class="page-layout">
+    <div class="page-header"><h1>图表</h1></div>
+    <div class="mt-lg font-b fontsize16">图表页面</div>
+    <div class="mt fontsize14 ">知识点：需要引入echarts.min.js</div>
+
+    <!--案例1：模板页面 -->
+    <div class="mt-lg font-b fontsize14">案例1：短期偿还能力</div>
+    <div class="mt fontsize14 ">知识点：在绘图前我们需要为 ECharts 准备一个具备高宽的 DOM 容器。
+        然后就可以通过 echarts.init 方法初始化一个 echarts 实例并通过 setOption 方法生成一个简单的柱状图，下面是完整代码</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code">
+
+
+    </xmp>
+    <div class="mt mb">效果如下：</div>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" class="border" style="width: 847px;height:526px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var dom=document.getElementById('main');
+        var myChart = echarts.init(dom);
+        // 指定图表的配置项和数据
+        var title="短期偿还能力";
+        var option=iroadEcharts.getOptions(title);
+        // 使用刚指定的配置项和数据显示图表。
+        var data=['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
+        var series=[
+            {
+                name: '现金比率(%)',
+                type: 'line',
+                data: [0.5, 2, 2.5, 3.1, 3.8, 3.6, 3.1]
+            },
+            {
+                name: '现金比率(倍)',
+                type: 'line',
+                data: [2, 2.3, 3.2, 1.5, 1, 1.4,2]
+            },
+            {
+                name: '流动比率(倍)',
+                type: 'line',
+                data: [1.3,1.5,1.9, 2.3,2.6, 2.1, 1.2]
+            }];
+        myChart.setOption(option);
+        myChart.showLoading();
+        myChart.setOption({
+            xAxis: {
+                data: data
+            },
+            series: series
+        });
+        myChart.hideLoading();
+    </script>
+
+    <!--案例1：模板页面 -->
+    <div class="mt-lg font-b fontsize14">案例2：成长能力分析</div>
+    <div class="mt fontsize14 ">知识点：在绘图前我们需要为 ECharts 准备一个具备高宽的 DOM 容器。
+        然后就可以通过 echarts.init 方法初始化一个 echarts 实例并通过 setOption 方法生成一个简单的柱状图，下面是完整代码</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code">
+
+
+    </xmp>
+    <div class="mt mb">效果如下：</div>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main2" class="border mb" style="width: 1739px;height:602px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var dom2=document.getElementById('main2');
+        var myChart2 = echarts.init(dom2);
+        // 指定图表的配置项和数据
+       // app.title = '多 Y 轴示例';
+        var title2="成长能力分析";
+        var option2 = iroadEcharts.getOptions2(title2);
+        // 使用刚指定的配置项和数据显示图表。
+        myChart2.setOption(option2);
+        var data2=['2010','2011','2012','2013','2014','2015','2016','2017'];
+        var series2=[
+            {
+                name:'营业收入(万元)',
+                type:'bar',
+                yAxisIndex: 0,
+                barCategoryGap:'40%',
+                data:[15, 20, 13, 35, 63, 50, 40, 47]
+            },
+            {
+                name:'营业利润(万元)',
+                type:'bar',
+                yAxisIndex: 0,
+                barCategoryGap:'40%',
+                data:[10, 22, 21, 45, 53, 75, 10,16]
+            },
+            {
+                name:'净利润(万元)',
+                type:'bar',
+                yAxisIndex: 0,
+                barCategoryGap:'40%',
+                data:[5, 10,11, 21, 25, 13, 9,5]
+            },
+            {
+                name:'总资产(万元)',
+                type:'bar',
+                yAxisIndex: 0,
+                barCategoryGap:'40%',
+                data:[75, 40, 60, 70, 85, 95, 90, 87]
+            },
+            {
+                name:'营业收入增长率',
+                type:'line',
+                yAxisIndex: 1,
+                data:[10, 20, 30,50, 40,20, 0, -10]
+            },
+            {
+                name:'营业利润增长率',
+                type:'line',
+                yAxisIndex: 1,
+                data:[30,34, 39,54, 56,60,61, 80]
+            },
+            {
+                name:'净利润增长率',
+                type:'line',
+                yAxisIndex: 1,
+                data:[70,75,80,65,53,71,80, 45]
+            },
+            {
+                name:'总资产增长率',
+                type:'line',
+                yAxisIndex: 1,
+                data:[35,42,69,50,34,66,62,57]
+            }
+        ];
+        var  legend2=[
+            {
+                data:['营业收入(万元)','营业利润(万元)','净利润(万元)','总资产(万元)']
+            },
+            {
+                data:['营业收入增长率','营业利润增长率','净利润增长率','总资产增长率']
+            }
+        ];
+
+        myChart2.setOption({
+            legend:legend2,
+            xAxis: {
+                data: data2
+            },
+            series: series2
+        });
+
+    </script>
+
+
+    <!--案例3：资产结构图-->
+    <div class="mt-lg font-b fontsize14">案例3：资产结构图</div>
+    <div class="mt fontsize14 ">知识点：在绘图前我们需要为 ECharts 准备一个具备高宽的 DOM 容器。
+        然后就可以通过 echarts.init 方法初始化一个 echarts 实例并通过 setOption 方法生成一个简单的柱状图，下面是完整代码</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code">
+
+
+    </xmp>
+    <div class="mt mb">效果如下：</div>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main3" class="border mb" style="width:844px;height:517px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var dom3=document.getElementById('main3');
+        var myChart3 = echarts.init(dom3);
+        // 指定图表的配置项和数据
+        // app.title = '多 Y 轴示例';
+        var title3="资产结构图";
+        var option3  =  iroadEcharts.getOptions3(title3);
+        // 使用刚指定的配置项和数据显示图表。
+        myChart3.setOption(option3);
+
+        var data3_1=[
+            {value:335, name:'流动负债'},
+            {value:310, name:'所有者权益'},
+            {value:234, name:'非流动负债'},
+            {value:135, name:'非流动资产'}
+        ];
+        var data3_2=[
+            {value:335, name:'非流动负债'},
+            {value:310, name:'非流动资产'}
+        ];
+
+        myChart3.setOption({
+            series:[
+                {
+                    data:data3_1
+                },
+                {
+                    data:data3_2
+                }
+            ]
+        });
+
+    </script>
+
+
+</div>
+
+</body>
+</html>

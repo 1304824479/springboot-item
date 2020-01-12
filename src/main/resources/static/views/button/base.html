@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>UI</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+	
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+	<script type="text/javascript" src="../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../js/core.js"></script>
+	<script type="text/javascript" src="../../js/ui.js"></script>
+
+</head>
+<body>
+
+<div class="page-layout">
+	<div class="page-header"><h1>按钮</h1></div>
+
+	<div class="page-content">
+		<div class="mt-lg font-b fontsize16">系统的按钮样式</div>
+		<div class="mt fontsize14 ">知识点：使用不同的按钮样式来控制按钮</div>
+		<!--案例1：不同状态的按钮 -->
+		<div class="mt-lg font-b fontsize14">案例1：不同状态图标按钮，支持a,input标签</div>
+		<div class="mt fontsize14 ">知识点：要用a标签实现按钮图标只需要在a标签上加上class为btn即可实现a标签通用按钮图标,
+			并且提供除系统之外的两种不同颜色的按钮灰色（btn-gray）和蓝色（btn-blue）灰白色（btn-pale）</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<a class="btn" href="#" >确定</a>
+	<a class="btn cancel" href="#" >取消</a>
+	<a class="btn disabled" href="#" >禁用</a>
+
+	<input type="button" value="确定" class="btn" >
+	<input type="button" value="取消" class="btn cancel" >
+	<input type="button" value="禁用" class="btn disabled" >
+
+	<input type="submit" value="确定" class="btn" >
+	<input type="submit" value="取消" class="btn cancel" >
+	<input type="submit" value="禁用" class="btn disabled" >
+
+
+	<a class="btn" href="#" >默认颜色</a>
+	<a class="btn btn-gray" href="#" >灰色</a>
+	<a class="btn btn-blue" href="#" >蓝色</a>
+	<a class="btn btn-pale color-black" href="#" >灰白色</a>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="mt">
+			<a class="btn" href="#" >确定</a>
+			<a class="btn cancel" href="#" >取消</a>
+			<a class="btn disabled" href="#" >禁用</a>
+
+		</div>
+		<div class="mt">
+			<input type="button" value="确定" class="btn" >
+			<input type="button" value="取消" class="btn cancel" >
+			<input type="button" value="禁用" class="btn disabled" >
+		</div>
+		<div class="mt">
+			<input type="submit" value="确定" class="btn" >
+			<input type="submit" value="取消" class="btn cancel" >
+			<input type="submit" value="禁用" class="btn disabled" >
+		</div>
+
+		<div class="mt">
+			<a class="btn" href="#" >默认颜色</a>
+			<a class="btn btn-gray" href="#" >灰色</a>
+			<a class="btn btn-blue" href="#" >蓝色</a>
+			<a class="btn btn-pale color-black" href="#" >灰白色</a>
+		</div>
+
+		<!--案例2：带有图标的按钮 -->
+		<div class="mt-lg font-b fontsize14">案例2：带有图标的按钮</div>
+		<div class="mt fontsize14 ">知识点：带图标的按钮仅支持与a标签一起使用</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<a class="btn" href="#" ><i class="icon iconfont icon-refresh " ></i> 刷新</a>
+	<a class="btn" href="#" ><i class="icon iconfont icon-add "></i> 添加</a>
+	<a class="btn" href="#" ><i class="icon iconfont icon-shitu_ "></i> 更多流程</a>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="mt">
+			<a class="btn" href="#" ><i class="icon iconfont icon-refresh " ></i> 刷新</a>
+			<a class="btn" href="#" ><i class="icon iconfont icon-add "></i> 添加</a>
+			<a class="btn" href="#" ><i class="icon iconfont icon-shitu_ "></i> 更多流程</a>
+		</div>
+
+		<!--案例3：链接图标按钮 -->
+		<div class="mt-lg font-b fontsize14">案例3：链接图标按钮</div>
+		<div class="mt fontsize14 ">知识点：连接图标按钮仅支持a标签使用</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<a class="color-sys" href="#" ><i class="icon iconfont icon-add "></i> 添加</a>
+	<a class="color-sys" href="#" ><i class="icon iconfont icon-update "></i> 修改</a>
+	<a class="color-sys" href="#" ><i class="icon iconfont icon-chakan "></i> 查看</a>
+	<a href="#" ><i class="icon iconfont icon-delete "></i> 删除</a>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="mt">
+			<a class="color-sys" href="#" ><i class="icon iconfont icon-add "></i> 添加</a>
+			<a class="color-sys ml-lg" href="#" ><i class="icon iconfont icon-update "></i> 修改</a>
+			<a class="color-sys ml-lg" href="#" ><i class="icon iconfont icon-chakan "></i> 查看</a>
+			<a class="ml-lg" href="#" ><i class="icon iconfont icon-delete "></i> 删除</a>
+		</div>
+
+		<!--案例4：小尺寸图标 -->
+		<div class="mt-lg font-b fontsize14">案例4：小尺寸图标</div>
+		<div class="mt fontsize14 ">知识点：小尺寸图标支持a,input标签</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<a class="btn btn-small" href="#" >请假</a>
+	<a class="btn btn-small" href="#" >加班申请</a>
+	<a class="btn btn-small" href="#" >外出登记</a>
+	<input type="button" value="出差申请" class="btn btn-small" >
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="mt">
+			<a class="btn btn-small" href="#" >请假</a>
+			<a class="btn btn-small" href="#" >加班申请</a>
+			<a class="btn btn-small" href="#" >外出登记</a>
+			<input type="button" value="出差申请" class="btn btn-small" >
+		</div>
+
+		<!--案例5：单独图标使用 -->
+		<div class="mt-lg font-b fontsize14">案例5：单独图标使用</div>
+		<div class="mt fontsize14 ">知识点：单独图标使用</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+	<i class="icon iconfont icon-process-wcdj iroad-icon"></i>
+	<i class="icon iconfont icon-process-qj iroad-icon color-yellow"></i>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="mt">
+			<i class="icon iconfont icon-process-wcdj iroad-icon"></i>
+			<i class="icon iconfont icon-process-qj iroad-icon color-yellow ml"></i>
+		</div>
+
+		<!--案例6：图标与文字的组合使用 -->
+		<div class="mt-lg font-b fontsize14">案例6：图标与文字的组合使用</div>
+		<div class="mt fontsize14 ">知识点：图标与文字的组合使用</div>
+		<div class="mt">代码如下：</div>
+		<xmp class="demo-code mt">
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-wcdj iroad-icon"></i>
+				<span>外出登记</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-qj iroad-icon"></i>
+				<span>请假</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-yysq iroad-icon"></i>
+				<span>用印申请</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-fwsq iroad-icon"></i>
+				<span>发文申请</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-jbsq iroad-icon"></i>
+				<span>加班申请</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-qj iroad-icon"></i>
+				<span>出差申请</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-zzsq iroad-icon"></i>
+				<span>转正申请</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-qj iroad-icon color-yellow"></i>
+				<span>请假</span>
+			</div>
+		</xmp>
+		<div class="mt">效果如下：</div>
+		<div class="mt">
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-wcdj iroad-icon"></i>
+				<span>外出登记</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-qj iroad-icon"></i>
+				<span>请假</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-yysq iroad-icon"></i>
+				<span>用印申请</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-fwsq iroad-icon"></i>
+				<span>发文申请</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-jbsq iroad-icon"></i>
+				<span>加班申请</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-qj iroad-icon"></i>
+				<span>出差申请</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-zzsq iroad-icon"></i>
+				<span>转正申请转正申请申请</span>
+			</div>
+			<div class="btn-text">
+				<i class="icon iconfont icon-process-qj iroad-icon color-yellow"></i>
+				<span>请假</span>
+			</div>
+		</div>
+
+
+
+
+	</div>
+</div>
+</body>
+</html>

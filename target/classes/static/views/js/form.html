@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>表单赋值</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+	
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+	<script type="text/javascript" src="../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../js/core.js"></script>
+	<script type="text/javascript" src="../../js/ui.js"></script>
+
+</head>
+<body>
+<script type="text/javascript" src="../../js/pages/form.js"></script>
+<div  class="page-layout">
+
+    <div class="page-header"><h1>表单赋值</h1></div>
+    <div class="mt-lg font-b fontsize16">表单赋值意思就是只需要给表单元素一个data-value的属性及属性值，程序自动根据该属性值来给表单赋值</div>
+    <div class="mt fontsize14 ">知识点：所有的效果都必须在表单元素加载完毕后执行 iroadForm.formElementInitValue();这一行js代码才会生效 </div>
+    <!--案例1：给单行文本框赋值 -->
+    <div class="mt-lg font-b fontsize14">案例1：给单行文本框赋值</div>
+    <div class="mt fontsize14 ">知识点：单行文本框的data-value属性值是多少，程序就给单行文本框赋值多少</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code mt">
+    <input type="text" name="aa" data-value="123456">
+    <input type="text" name="aa" data-value="阿斯顿发生">
+    </xmp>
+    <div class="mt">效果如下：</div>
+    <div class="mt">
+        <input type="text" name="aa" data-value="123456">
+        <input type="text" name="aa" data-value="阿斯顿发生">
+    </div>
+
+    <!--案例2：给多行文本框赋值 -->
+    <div class="mt-lg font-b fontsize14">案例2：给多行文本框赋值</div>
+    <div class="mt fontsize14 ">知识点：多行文本框的data-value属性值是多少，程序就给单行文本框赋值多少</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code mt">
+    <textarea data-value="文本描述"></textarea>
+    </xmp>
+    <div class="mt">效果如下：</div>
+    <div class="mt">
+        <textarea data-value="文本描述"></textarea>
+    </div>
+
+    <!--案例3：给单选按钮框赋值 -->
+    <div class="mt-lg font-b fontsize14">案例3：给单选按钮框赋值</div>
+    <div class="mt fontsize14 ">知识点：程序通过循环判断单选按钮框的data-value和value值是否相等，如果相等则将该单选框自动选中</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code mt">
+    <label><input type='radio' name='bizConfigId' value='111' data-value='222' >小</label>
+    <label><input type='radio' name='bizConfigId' value='222' data-value='222'>中</label>
+    <label><input type='radio' name='bizConfigId' value='333' data-value='222'>大</label>
+    </xmp>
+    <div class="mt">效果如下：</div>
+    <div class="mt">
+        <label><input type='radio' name='bizConfigId' value='111' data-value='222' >小</label>
+        <label><input type='radio' name='bizConfigId' value='222' data-value='222'>中</label>
+        <label><input type='radio' name='bizConfigId' value='333' data-value='222'>大</label>
+    </div>
+
+    <!--案例4：给多选按钮框赋值 -->
+    <div class="mt-lg font-b fontsize14">案例4：给多选按钮框赋值</div>
+    <div class="mt fontsize14 ">知识点：程序通过循环判断多选按钮框的data-value是否包含value值，如果包含则将该多选框自动选中</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code mt">
+        <label><input type='checkbox' name='bizConfigId' value='111' data-value='111,222' >金融</label>
+        <label><input type='checkbox' name='bizConfigId' value='222' data-value='222'>理财</label>
+        <label><input type='checkbox' name='bizConfigId' value='333' data-value='222'>互联网</label>
+    </xmp>
+    <div class="mt">效果如下：</div>
+    <div class="mt">
+        <label><input type='checkbox' name='bizConfigId' value='111' data-value='111,222' >金融</label>
+        <label><input type='checkbox' name='bizConfigId' value='222' data-value='222'>理财</label>
+        <label><input type='checkbox' name='bizConfigId' value='333' data-value='222'>互联网</label>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            iroadForm.formElementInitValue();
+        })
+    </script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ 	<meta charset="UTF-8" />
+	<title>时间控件</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+	
+	<link rel="stylesheet" type="text/css" href="../../css/all.css">
+	<script type="text/javascript" src="../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../js/core.js"></script>
+	<script type="text/javascript" src="../../js/ui.js"></script>
+
+</head>
+<body>
+<script type="text/javascript" src="../../libs/jedate.js"></script>
+<style type="text/css">
+
+    .aa{
+        background:url("../../images/icon-rili.png") no-repeat right 10px center;
+        background-size: 18px  ;
+    }
+</style>
+<div class="page-layout" >
+    <div class="page-header"><h1>时间控件</h1></div>
+    <div class="mt-lg font-b fontsize16">时间控件分为日期控件和日期时间控件两种</div>
+    <div class="mt fontsize14 ">知识点：无</div>
+    <!--案案例1：日期控件 -->
+    <div class="mt-lg font-b fontsize14">案例1：日期控件</div>
+    <div class="mt fontsize14 ">知识点：日期控件只需要在input标签中加上iroad-date即可</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code mt">
+    <input type="text" class="iroad-date"   >
+        $(function(){
+           cfg:可选项
+           cfg.skin:皮肤颜色 可选数字0到9，或者直接是颜色值
+           var cfg={
+               skin:0
+           }
+           calendar.init(cfg);
+
+           举例：calendar.init({skin:9});
+        });
+    </xmp>
+    <div class="mt">效果如下：</div>
+    <div  class="mt">
+        <input type="text" class="iroad-date"    >
+    </div>
+
+    <!--案例2：日期时间控件 -->
+    <div class="mt-lg font-b fontsize14">案例2：日期时间控件</div>
+    <div class="mt fontsize14 ">知识点：日期控件只需要在input标签中加上iroad-time即可</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code mt">
+    <input type="text" class="iroad-time "     >
+    </xmp>
+    <div class="mt">效果如下：</div>
+    <div  class="mt">
+        <input type="text" class="iroad-time"   >
+    </div>
+   <script>
+       $(function(){
+           calendar.init({skin:9});
+       });
+   </script>
+
+    <!--案例3：自定义时间控件 -->
+    <div class="mt-lg font-b fontsize14">案例3：自定义时间控件</div>
+    <div class="mt fontsize14 ">知识点：需要引入jedate.js，同时对时间进行初始化</div>
+    <div class="mt">代码如下：</div>
+    <xmp class="demo-code mt">
+        <script type="text/javascript" src="../../libs/jedate.js"></script>
+        <div  class="mt">
+            <input type="text"  id="test01" class="iroad-rili" >
+        </div>
+        <script type="text/javascript" >
+            jeDate("#test01",{
+                theme:{bgcolor:"#00A1CB",pnColor:"#00CCFF"},
+                format: "YYYY"
+            });
+        </script>
+        参考使用网址：http://www.jemui.com
+    </xmp>
+
+    <div class="mt">效果如下：</div>
+    <div  class="mt">
+        <input type="text"  id="test01" class="iroad-rili"  >
+    </div>
+    <script type="text/javascript" >
+        jeDate("#test01",{
+            theme:{bgcolor:"#00A1CB",pnColor:"#00CCFF"},
+            format: "YYYY"
+        });
+    </script>
+
+</div>
+
+
+</body>
+</html>
