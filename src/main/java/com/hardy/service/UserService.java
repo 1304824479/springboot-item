@@ -28,7 +28,7 @@ public class UserService {
 	}
 	
 	public User getUserById(int id){
-		log.info(id+"");
+//		log.info(id+"");
 		return this.userMapper.getUserById(id);
 	}
 	
