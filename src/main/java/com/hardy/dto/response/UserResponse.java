@@ -12,28 +12,6 @@ public class UserResponse {
 	private int id;
 	@ApiModelProperty(value="姓名")
 	private String name;
-<<<<<<< HEAD
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	@ApiModelProperty(value="密码")
-	private String password;
-=======
 	@ApiModelProperty(value="密码")
 	private String password;
 	public int getId() {
@@ -55,5 +33,4 @@ public class UserResponse {
 		this.password = password;
 	}
 	
->>>>>>> branch 'dev' of https://github.com/1304824479/springboot-item
 }

@@ -25,8 +25,4 @@ public class UserRequest {
 		this.password = password;
 	}
 	
-<<<<<<< HEAD
-=======
-	
->>>>>>> branch 'dev' of https://github.com/1304824479/springboot-item
 }
