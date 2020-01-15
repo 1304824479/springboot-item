@@ -19,7 +19,7 @@ public class UserService {
 	private UserMapper userMapper;
 	
 	@Transactional
-	public int insertUser(String name,int age){
+	public int insertUser(String name,String age){
 		int result=userMapper.insert(name, age);
 		/*int i=1/age;
 		System.out.println(i);

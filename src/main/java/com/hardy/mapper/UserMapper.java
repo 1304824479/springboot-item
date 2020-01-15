@@ -14,10 +14,10 @@ public interface UserMapper {
 	public User getUserById(@Param("id") Integer id);
 	
 	@Select("select * from USERS WHERE NAME = #{name}")
-	User findByName(@Param("name") String name,@Param("age") Integer age);
+	User findByName(@Param("name") String name,@Param("age") String password);
 	
-	@Insert("insert into users(name,age) values(#{name},#{age})")
-	int insert(@Param("name") String name,@Param("age") Integer age);
+	@Insert("insert into users(name,password) values(#{name},#{password})")
+	int insert(@Param("name") String name,@Param("age") String password);
 	
 	@Select("select * from USERS ")
 	public List<User> getList();

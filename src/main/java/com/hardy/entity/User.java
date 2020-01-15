@@ -4,12 +4,35 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@Getter
-@Setter
 public class User {
 
-	private Integer id;
-	private Integer age;
+	private int id;
 	private String name;
+	private String password;
+	private int rid;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public int getRid() {
+		return rid;
+	}
+	public void setRid(int rid) {
+		this.rid = rid;
+	}
 	
 }

@@ -57,23 +57,22 @@
 <body>
 
 <div  class="page-layout">
-
-	<table class="table-border" >
-		<tr>
-			<td width="150">请输入名称</td>
-			<td><input type="text" name="name"  placeholder="请输入姓名" ></td>
-		</tr>
-		<tr>
-			<td width="150">请输入年龄</td>
-			<td><input type="text" name="age"  placeholder="请输入年龄" ></td>
-		</tr>
-		
-		<tr>
-			<td width="150"></td>
-			<td><input type="button" value="确定" class="btn" onclick="submit()" ></td>
-		</tr>
-		 
-	</table>
+	<form action="./insertUser" method="post">
+		<table class="table-border" >
+			<tr>
+				<td width="150">请输入名称</td>
+				<td><input type="text" name="name"  placeholder="请输入姓名" ></td>
+			</tr>
+			<tr>
+				<td width="150">请输入年龄</td>
+				<td><input type="text" name="age"  placeholder="请输入年龄" ></td>
+			</tr>
+			<tr>
+				<td width="150"></td>
+				<td><input type="button" value="确定" class="btn" onclick="submit()" ></td>
+			</tr>
+		</table>
+	</form>
 </div>
 
 </body>
