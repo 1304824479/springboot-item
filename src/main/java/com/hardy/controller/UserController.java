@@ -58,7 +58,12 @@ public class UserController {
 		User u=this.userService.getUserById(id);
 		if(u!=null){
 			UserResponse resp=new UserResponse();
+<<<<<<< HEAD
 			resp.setPassword(u.getPassword());
+=======
+//			resp.getPassword(u.getPassword());
+			resp.getPassword(u.getPassword());
+>>>>>>> branch 'dev' of https://github.com/1304824479/springboot-item
 			resp.setId(u.getId());
 			resp.setName(u.getName());
 			return resp;

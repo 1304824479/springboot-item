@@ -19,8 +19,13 @@ public class UserService {
 	private UserMapper userMapper;
 	
 	@Transactional
+<<<<<<< HEAD
 	public int insertUser(String name,String age){
 		int result=userMapper.insert(name, age);
+=======
+	public int insertUser(String name,String password){
+		int result=userMapper.insert(name, password);
+>>>>>>> branch 'dev' of https://github.com/1304824479/springboot-item
 		/*int i=1/age;
 		System.out.println(i);
 		log.info("#####result="+result);*/
