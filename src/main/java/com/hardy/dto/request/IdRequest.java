@@ -11,4 +11,12 @@ public class IdRequest {
 
 	@ApiModelProperty(value="id")
 	private int id;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 }
