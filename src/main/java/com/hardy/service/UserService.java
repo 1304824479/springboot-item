@@ -19,8 +19,8 @@ public class UserService {
 	private UserMapper userMapper;
 	
 	@Transactional
-	public int insertUser(String name,int age){
-		int result=userMapper.insert(name, age);
+	public int insertUser(String name,String password){
+		int result=userMapper.insert(name, password);
 		/*int i=1/age;
 		System.out.println(i);
 		log.info("#####result="+result);*/

@@ -4,12 +4,16 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-@Data
+
 @ApiModel(value="user对象",description="用户对象user")
 public class UserResponse {
 
 	@ApiModelProperty(value="id")
 	private int id;
+	@ApiModelProperty(value="姓名")
+	private String name;
+	@ApiModelProperty(value="密码")
+	private String password;
 	public int getId() {
 		return id;
 	}
@@ -22,14 +26,11 @@ public class UserResponse {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
-		return age;
+	public String getPassword() {
+		return password;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	@ApiModelProperty(value="姓名")
-	private String name;
-	@ApiModelProperty(value="年龄")
-	private int age;
+	
 }

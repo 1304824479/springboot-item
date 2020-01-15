@@ -30,8 +30,8 @@ public class UserController {
 	@RequestMapping(value="/insertUser",method=RequestMethod.POST)
 	public Integer insertUser(@RequestBody UserRequest request){
 		String name=request.getName();
-		int age=request.getAge();
-		return userService.insertUser(name, age);
+		String password=request.getPassword();
+		return userService.insertUser(name, password);
 	}
 	
 	@ApiOperation(value="查询用户列表", notes="查询用户列表")
@@ -42,7 +42,7 @@ public class UserController {
 		if(userList!=null&&userList.size()>0){
 			for(User u:userList){
 				UserResponse resp=new UserResponse();
-				resp.setAge(u.getAge());
+				resp.setPassword(u.getPassword());
 				resp.setId(u.getId());
 				resp.setName(u.getName());
 				respList.add(resp);
@@ -58,7 +58,8 @@ public class UserController {
 		User u=this.userService.getUserById(id);
 		if(u!=null){
 			UserResponse resp=new UserResponse();
-			resp.setAge(u.getAge());
+//			resp.getPassword(u.getPassword());
+			resp.getPassword(u.getPassword());
 			resp.setId(u.getId());
 			resp.setName(u.getName());
 			return resp;

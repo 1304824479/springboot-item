@@ -4,25 +4,30 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@Getter
-@Setter
 public class User {
 
 	private Integer id;
-	private Integer age;
+	private String password;
 	private String name;
-<<<<<<< HEAD
+	private int rid;
+	public int getRid() {
+		return rid;
+	}
+	public void setRid(int rid) {
+		this.rid = rid;
+	}
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Integer getAge() {
-		return age;
+	
+	public String getPassword() {
+		return password;
 	}
-	public void setAge(Integer age) {
-		this.age = age;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getName() {
 		return name;
@@ -30,7 +35,4 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-=======
->>>>>>> branch 'master' of https://github.com/1304824479/springboot-item
-	
 }
