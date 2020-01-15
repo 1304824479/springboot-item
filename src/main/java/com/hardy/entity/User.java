@@ -1,13 +1,17 @@
 package com.hardy.entity;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data // @Data==@Getter+@Setter
+
+@Getter
+@Setter
 public class User {
 
 	private Integer id;
 	private Integer age;
 	private String name;
+<<<<<<< HEAD
 	public Integer getId() {
 		return id;
 	}
@@ -26,5 +30,7 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/1304824479/springboot-item
 	
 }
